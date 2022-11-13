@@ -30,11 +30,7 @@ def highestValuePalindrome(s, n, k):
                 if(palin[i]!=palin[lengt]):
                     palin[i]=palin[lengt]=max(palin[i],palin[lengt])
                     totalchanges-=1
-                    onetimechanges-=1  
-                if(i==lengt and onetimechanges>0):
-                    palin[i]='9'
-                    totalchanges-=1
-                    onetimechanges-=1      
+                    onetimechanges-=1     
                 lengt-=1
                 i+=1
 
