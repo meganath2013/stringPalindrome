@@ -41,8 +41,21 @@ def highestValuePalindrome(s, n, k):
             lengt=n-1
             i=0 
             while(totalchanges>=2 and i<=lengt):
+                if(palin[i]!='9'):
                     palin[i]=palin[lengt]='9'
                     totalchanges-=2
+                lengt-=1
+                i+=1
+            
+            lengt=n-1
+            i=0 
+            while(totalchanges>0 and i<=lengt):
+                if(i==lengt):
+                    if(palin[i]!='9'):
+                        palin[i]='9'
+                        totalchanges-=1
+                lengt-=1
+                i+=1
 
 
 
@@ -56,4 +69,3 @@ def highestValuePalindrome(s, n, k):
     else:
             return "-1"
         
-
